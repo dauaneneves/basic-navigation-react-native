@@ -1,10 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { createNativeStackNavigator } from "react-navigation";
+import Home from "./Home";
+import Contact from "./Contact";
+
+const Stack = createNativeStackNavigator();
+const navigate = useNavigation();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+    <NavigationContainer>
+      <Stack.Navigator>
       <StatusBar style="auto" />
     </View>
   );
